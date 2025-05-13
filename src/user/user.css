@@ -1,0 +1,16 @@
+
+
+
+/* USER DETAILS */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.navbar button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: grey
+}
