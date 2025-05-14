@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Title } from "react-head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
@@ -17,6 +18,7 @@ interface UserType {
 function User() {
     const [users, setUsers] = useState<UserType[]>([]);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -85,6 +87,7 @@ function User() {
                                 <td>
                                     <button
                                         className="action-btn"
+                                        onClick={() => navigate(`/users/${user.id}`)} // Navigate to user detail page
                                     >
                                         <FontAwesomeIcon icon={faEye} />
                                         Show

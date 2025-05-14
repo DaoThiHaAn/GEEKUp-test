@@ -9,6 +9,7 @@ import { faAddressCard, faRectangleList } from '@fortawesome/free-regular-svg-ic
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import UserDetail from './user/user_detail.tsx';
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -48,6 +49,7 @@ function App() {
             <Route path='/users' element={<User />} />
             <Route path='/albums' element={<Album />} />
             <Route path="/albums/:id" element={<AlbumDetails />} /> {/* id is dynamically changed */}
+            <Route path="/users/:id" element={<UserDetail />} /> {/* id is dynamically changed */}
           </Routes>
         </section>
       </main>

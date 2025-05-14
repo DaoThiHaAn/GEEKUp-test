@@ -103,7 +103,7 @@ aside.collapsed p {
 .content {
   background-color: rgb(241, 241, 241);
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   height: 100%;
   box-sizing: border-box; /* Ensure padding is included in the height */
   overflow-y: auto; /* Make the content section scrollable */
