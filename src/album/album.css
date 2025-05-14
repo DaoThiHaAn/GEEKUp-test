@@ -13,3 +13,88 @@
 }
 
 /* ALBUM DETAILS */
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btn {
+    color: grey;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 7px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(69, 69, 69, 0.133);
+}
+
+.nav-header p {
+    margin: 0;
+}
+
+.back-btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: black;
+}
+
+.back-btn a {
+    color: grey;
+    margin-left: 30px;
+}
+
+.back-btn .arrow {
+    font-size: 25px;
+}
+
+/* card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.1),
+        0 -2px 5px rgba(0, 0, 0, 0.1),
+        2px 0 5px rgba(0, 0, 0, 0.1),
+        -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.album-user-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: rgb(74, 170, 211);
+    font-size: 1.1em;
+    align-items: center;
+}
+
+.album-user-info img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+hr {
+    background-color: rgb(206, 206, 206);
+}
+
+.avatar-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    width: 200px;
+}
