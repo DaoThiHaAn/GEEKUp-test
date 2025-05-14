@@ -4,6 +4,7 @@ import { Title } from "react-head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import './album.css';
 import '../table.css';
 import '../loading.css';
@@ -129,7 +130,11 @@ function Album() {
                                                         alt={user.name}
                                                         className="avatar"
                                                     />
-                                                    <span>{user.name}</span>
+                                                    <span>
+                                                        <Link to={`/users/${user.id}`}>
+                                                        {user.name}
+                                                        </Link>
+                                                    </span>
                                                 </div>
                                             ) : (
                                                 <div className="spinner-container">
