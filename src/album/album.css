@@ -1,8 +1,15 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(74, 170, 211)
+}
 
-
-
-
-
-
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 /* ALBUM DETAILS */

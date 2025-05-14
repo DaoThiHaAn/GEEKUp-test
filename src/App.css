@@ -1,8 +1,9 @@
 
 nav {
-  width: 100%;
+  min-width: 100%;
   height: fit-content;
   padding: 15px 0;
+  z-index: 9999;
 }
 
 nav img {
@@ -12,22 +13,22 @@ nav img {
 }
 
 main {
+  flex: 1;
   display: flex;
   flex-direction: row;
-  flex: flex-grow;
   width: 100%;
+  z-index: 1;
 }
 
 aside {
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 5px;
   padding-top: 30px;
   gap: 5px;
   min-width: 200px;
-  transition: width 0.5s ease, padding 0.5s ease, gap 0.5s ease; /* Smooth transition for width, padding, and gap */
-  z-index: 1;
+  transition: width 3s ease, padding 1s ease, gap 1s ease; /* Smooth transition for width, padding, and gap */
 }
 
 aside a {
@@ -36,7 +37,7 @@ aside a {
 
 aside p {
   margin: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
   opacity: 1;
 }
 
@@ -71,7 +72,7 @@ aside.collapsed p {
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
-  transition: padding 0.5s ease, gap 0.5s ease; /* Smooth transition for padding and gap */
+  transition: padding 1s ease, gap 1s ease, display 3s ease; /* Smooth transition for padding and gap */
 }
 
 .tab-btn:hover, .tab-btn.active:hover {
@@ -79,19 +80,17 @@ aside.collapsed p {
 }
 
 .tab-btn.active {
-  background-color: #c9e3fa;
+  background-color: #dff0ff;
   color: rgb(53, 120, 202)
 }
 
 .toggle-tab-btn {
+  position: fixed;
+  bottom: 20px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.toggle-tab-btn {
+  justify-content: flex-end;  
   background: none;
   outline: none;
   border: none;
@@ -103,9 +102,12 @@ aside.collapsed p {
 }
 
 .content {
-  background-color: rgb(222, 221, 221);
+  background-color: rgb(241, 241, 241);
   flex: 1;
   padding: 10px;
   height: 100%;
-  position: relative;
+  box-sizing: border-box; /* Ensure padding is included in the height */
+  overflow-y: auto; /* Make the content section scrollable */
+  z-index: 1;
 }
+
